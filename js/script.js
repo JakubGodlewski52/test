@@ -22,14 +22,14 @@ function init() {
     controls.update();
 
    
-    const light = new THREE.AmbientLight(0x404040); 
+    const light = new THREE.AmbientLight(0xffffff, 0.8); 
     scene.add(light);
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1); 
     scene.add(directionalLight);
 
    
     const loader = new THREE.GLTFLoader();
-    loader.load('model/1.gltf', function(gltf) {
+    loader.load('model/2.gltf', function(gltf) {
         scene.add(gltf.scene);
     }, undefined, function(error) {
         console.error(error);
