@@ -19,8 +19,10 @@ function init() {
 
     const light = new THREE.AmbientLight(0xffffff, 1.0); 
     scene.add(light);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 2); 
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+    directionalLight.position.set(5, 4, 15);
     scene.add(directionalLight);
+    
 
     loadModel('niebieski');
 }
@@ -40,7 +42,7 @@ function loadModel(color) {
             break;
         case 'czarny':
             modelPath = 'model/Black/samsung_s24 black.gltf';
-            break;
+            break; 
         case 'szary':
             modelPath = 'model/Gray/samsung_s24 gray.gltf';
             break;
